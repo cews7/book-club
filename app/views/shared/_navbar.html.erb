@@ -1,4 +1,9 @@
-<ul>
-  <li><%= link_to "Home", root_path %></li>
-  <li><%= link_to "Books", books_path %></li>
-</ul>
+<nav>
+  <div class="nav-wrapper indigo darken-3">
+    <%= link_to image_tag("logo.png"), root_path, class:"brand-logo" %>
+    <ul id="nav-mobile" class="right position hide-on-med-and-down">
+      <li class="hoverable"><%= link_to "Home", root_path %></li>
+      <li class="hoverable"><%= link_to "Books", books_path %></li>
+    </ul>
+  </div>
+</nav>

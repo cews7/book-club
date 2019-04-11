@@ -1,10 +1,20 @@
 <%= render partial: "shared/navbar" %>
-
-<div class="books-container">
-  <% @books.each do |book| %>
-    <%= link_to book.title, book_path(book) %>
-    <%= book.author %>
-    <%= book.page_count %>
-    <%= book.year_published %>
+<div class="row">
+ <% @books.each do |book| %>
+  <div class="col s3">
+      <div class="card">
+        <div class="card-image">
+          <%= image_tag("book.jpg") %>
+          <span class="card-title"><%= link_to book.title, book_path(book) %></span>
+        </div>
+        <div class="card-content">
+          <ul>
+            <p class="bolden">Author: </p><li><%= book.author %></li>
+            <p class="bolden">Page Count: </p><li><%= book.page_count %></li>
+            <p class="bolden">Year Published: </p><li><%= book.year_published %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
