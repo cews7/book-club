@@ -1,2 +1,10 @@
 <%= render partial: "shared/navbar" %>
-<h1>books here</h1>
+
+<div class="books-container">
+  <% @books.each do |book| %>
+    <%= link_to book.title, book_path(book) %>
+    <%= book.author %>
+    <%= book.page_count %>
+    <%= book.year_published %>
+  <% end %>
+</div>
