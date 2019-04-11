@@ -8,28 +8,76 @@
 Book.destroy_all
 
 Book.create!([{
-    title: "Book One",
-    page_count: 10,
-    author: "Author One",
-    year_published: 2019
-  },
-  {
-    title: "Book Two",
-    page_count: 20,
-    author: "Author Two",
-    year_published: 2019
-  },
-  {
-    title: "Book Three",
-    page_count: 30,
-    author: "Author Three",
-    year_published: 2019
-  },
-  {
-    title: "Book Four",
-    page_count: 40,
-    author: "Author Four",
-    year_published: 2019
-  }])
+  title: "Book One",
+  page_count: 10,
+  author: "Author One",
+  year_published: 2019
+},
+{
+  title: "Book Two",
+  page_count: 20,
+  author: "Author Two",
+  year_published: 2019
+},
+{
+  title: "Book Three",
+  page_count: 30,
+  author: "Author Three",
+  year_published: 2019
+},
+{
+  title: "Book Four",
+  page_count: 40,
+  author: "Author Four",
+  year_published: 2019
+},
+{
+  title: "Book One",
+  page_count: 10,
+  author: "Author One",
+  year_published: 2019
+},
+{
+  title: "Book Two",
+  page_count: 20,
+  author: "Author Two",
+  year_published: 2019
+},
+{
+  title: "Book Three",
+  page_count: 30,
+  author: "Author Three",
+  year_published: 2019
+},
+{
+  title: "Book Four",
+  page_count: 40,
+  author: "Author Four",
+  year_published: 2019
+},
+{
+  title: "Book One",
+  page_count: 10,
+  author: "Author One",
+  year_published: 2019
+},
+{
+  title: "Book Two",
+  page_count: 20,
+  author: "Author Two",
+  year_published: 2019
+},
+{
+  title: "Book Three",
+  page_count: 30,
+  author: "Author Three",
+  year_published: 2019
+},
+{
+  title: "Book Four",
+  page_count: 40,
+  author: "Author Four",
+  year_published: 2019
+}])
 
   p "Created #{Book.count} books"
