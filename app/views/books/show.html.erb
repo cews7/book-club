@@ -1,7 +1,20 @@
 <%= render partial: "shared/navbar" %>
 <br>
-<div>
-  <%= @book.title %>
-  <%= @book.author %>
-  <%= @book.page_count %>
+<div class="col s12 m7">
+  <h2 class="header"><%= @book.title %></h2>
+  <div class="card horizontal">
+    <div class="card-image">
+      <%= image_tag("book.jpg") %>
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <ul>
+          <li><%= @book.page_count %></li>
+        </ul>
+      </div>
+      <div class="card-action">
+        <%= @book.author %>
+      </div>
+    </div>
+  </div>
 </div>
