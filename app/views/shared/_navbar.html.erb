@@ -1,9 +1,12 @@
 <nav>
-  <div class="nav-wrapper indigo darken-3">
+  <div class="nav-wrapper indigo darken-3 line-position">
     <%= link_to image_tag("logo.png"), root_path, class:"brand-logo" %>
     <ul id="nav-mobile" class="right position hide-on-med-and-down">
-      <li class="hoverable"><%= link_to "Home", root_path %></li>
-      <li class="hoverable"><%= link_to "Books", books_path %></li>
+      <% if current_page?(controller: 'books', action: 'index') %>
+         <li><%= link_to "Add Book", new_book_path %></li>
+      <% end %>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Books", books_path %></li>
     </ul>
   </div>
 </nav>

@@ -1,0 +1,28 @@
+<%= render partial: "shared/navbar" %>
+<%= form_for :book do |f| %>
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <%= f.text_field :title, placeholder: "title" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <%= f.text_field :author, placeholder: "author" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s2">
+        <%= f.text_field :page_count, placeholder: "page count" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s2">
+        <%= f.text_field :year_published, placeholder: "year published" %>
+      </div>
+    </div>
+    <%= f.submit "Submit", class: "submit-position btn waves-effect waves-light" %>
+  </form>
+</div>
+<% end %>
