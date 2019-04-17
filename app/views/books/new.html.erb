@@ -17,7 +17,12 @@
         <%= f.text_field :page_count, placeholder: "page count" %>
       </div>
     </div>
-    <%= f.submit, class: "btn waves-effect waves-light" %>
+    <div class="row">
+      <div class="input-field col s2">
+        <%= f.text_field :year_published, placeholder: "year published" %>
+      </div>
+    </div>
+    <%= f.submit "Submit", class: "submit-position btn waves-effect waves-light" %>
   </form>
 </div>
 <% end %>
