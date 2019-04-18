@@ -9,7 +9,7 @@ class BooksController < ApplicationController
   end
 
   def new
-    @new = Book.new
+    @book = Book.new
   end
 
   def create
