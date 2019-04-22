@@ -1,4 +1,3 @@
-require 'pry'
 class BooksController < ApplicationController
   def index
     @books = Book.all
@@ -24,6 +23,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :author, :page_count, :year_published)
+    params.require(:book).permit(:title, :page_count, :year_published)
   end
 end
