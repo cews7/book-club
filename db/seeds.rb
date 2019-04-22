@@ -9,7 +9,7 @@
 Author.destroy_all
 Book.destroy_all
 
-100.times do
+10.times do
   author =
   Author.create!(
     name: Faker::Name.unique.name,
