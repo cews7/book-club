@@ -1,10 +1,10 @@
-require 'pry'
 class Book < ApplicationRecord
-  validates_uniqueness_of :title, :author
+  validates_uniqueness_of :title
   before_validation :titleize_attributes
+
+  belongs_to :author, optional: true
 
   def titleize_attributes
     self.title  = title.titleize
-    self.author = author.titleize
   end
 end

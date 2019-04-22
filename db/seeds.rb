@@ -5,79 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Author.destroy_all
 Book.destroy_all
 
-Book.create!([{
-  title: "Book One",
-  page_count: 10,
-  author: "Author One",
-  year_published: 2019
-},
-{
-  title: "Book Two",
-  page_count: 20,
-  author: "Author Two",
-  year_published: 2019
-},
-{
-  title: "Book Three",
-  page_count: 30,
-  author: "Author Three",
-  year_published: 2019
-},
-{
-  title: "Book Four",
-  page_count: 40,
-  author: "Author Four",
-  year_published: 2019
-},
-{
-  title: "Book One",
-  page_count: 10,
-  author: "Author One",
-  year_published: 2019
-},
-{
-  title: "Book Two",
-  page_count: 20,
-  author: "Author Two",
-  year_published: 2019
-},
-{
-  title: "Book Three",
-  page_count: 30,
-  author: "Author Three",
-  year_published: 2019
-},
-{
-  title: "Book Four",
-  page_count: 40,
-  author: "Author Four",
-  year_published: 2019
-},
-{
-  title: "Book One",
-  page_count: 10,
-  author: "Author One",
-  year_published: 2019
-},
-{
-  title: "Book Two",
-  page_count: 20,
-  author: "Author Two",
-  year_published: 2019
-},
-{
-  title: "Book Three",
-  page_count: 30,
-  author: "Author Three",
-  year_published: 2019
-},
-{
-  title: "Book Four",
-  page_count: 40,
-  author: "Author Four",
-  year_published: 2019
-}])
+100.times do
+  author =
+  Author.create!(
+    name: Faker::Name.unique.name,
+  )
+  author.books.create(
+    title: Faker::Book.unique.title,
+    page_count: Faker::Number.number(3),
+    year_published: Faker::Number.number(4))
 
-  p "Created #{Book.count} books"
+  if author.id % 4 == 0
+    author.books.create(
+      title: Faker::Book.unique.title,
+      page_count: Faker::Number.number(3),
+      year_published: Faker::Number.number(4))
+  end
+end
+
+p "Created #{Book.count} books and #{Author.count} authors"
